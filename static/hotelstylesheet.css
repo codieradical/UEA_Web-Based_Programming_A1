@@ -1,0 +1,23 @@
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7ea5e5;
+}
+.navitem {
+    float: left;
+    border-right: 2px solid white;
+}
+
+.navitem a {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    color: black;
+    font-family: Arial;
+}
+
+.navitem a:hover {
+    background-color: #5f7daf;
+}
