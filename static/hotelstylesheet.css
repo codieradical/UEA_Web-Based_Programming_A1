@@ -1,3 +1,4 @@
+/* Navbar styling */
 #navbar {
     list-style-type: none;
     margin: 0;
@@ -21,3 +22,25 @@
 .navitem a:hover {
     background-color: #5f7daf;
 }
+
+/* Header styling */
+#header {
+    height: 80px;
+}
+
+#company {
+    float: left;
+    padding-left: 10px;
+    font-family: Arial;
+}
+
+#logo {
+    float: right;
+    width: 150px;
+    height: 90%;
+    padding-right: 10px;
+}
+
+
+
+
