@@ -41,6 +41,22 @@
     padding-right: 10px;
 }
 
+/* Page content syling */
+
+p {
+    font-size: 12px;
+    font-family: Times New Roman;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Arial;
+}
+
+li {
+    font-size: 12px;
+    font-family: Times New Roman;
+}
+
 
 
 

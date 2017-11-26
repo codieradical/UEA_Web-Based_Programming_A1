@@ -1,0 +1,32 @@
+/* Image slideshow styling */
+#activeitem {
+    width: 80%;
+    position: center;
+    padding-bottom: 10px;
+}
+
+#imagenav {
+    width: 80%;
+}
+
+#next {
+    float: right;
+}
+
+#previous {
+    float: left;
+}
+
+/* Page content styling */
+#rating {
+    width: 150px;
+    height: 25px;
+}
+
+.column {
+    width: 48%;
+    float: left;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+}
