@@ -19,7 +19,8 @@
 
 /* Page content styling */
 #rating {
-    width: 150px;
+    position: absolute;
+    max-width: 150px;
     height: 25px;
 }
 
