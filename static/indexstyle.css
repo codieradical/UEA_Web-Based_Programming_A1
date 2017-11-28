@@ -1,8 +1,13 @@
 /* Image slideshow styling */
-#activeitem {
+.hotelimg {
+    display: none;
     width: 80%;
     position: center;
     padding-bottom: 10px;
+}
+
+#mainimg {
+    display: block;
 }
 
 #imagenav {
