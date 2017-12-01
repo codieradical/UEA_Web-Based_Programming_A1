@@ -1,0 +1,38 @@
+/* Image slideshow styling */
+.hotelimg {
+    display: none;
+    width: 80%;
+    position: center;
+    padding-bottom: 10px;
+}
+
+#mainimg {
+    display: block;
+}
+
+#imagenav {
+    width: 80%;
+}
+
+#next {
+    float: right;
+}
+
+#previous {
+    float: left;
+}
+
+/* Page content styling */
+#rating {
+    position: absolute;
+    max-width: 150px;
+    height: 25px;
+}
+
+.column {
+    width: 48%;
+    float: left;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+}
