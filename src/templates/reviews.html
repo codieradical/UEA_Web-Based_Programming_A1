@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>  
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
+        <title>Reviews</title>
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/reviews.css"/>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="company"> Alex and Jake's Hotel</h1>
+            <img src="static/img/logo.png" alt="Company Logo" id="logo"> 
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href= "/"> Home </a></li>
+                <li><a href = "attractions"> Attractions </a></li>
+                <li><a href = "reviews"> Reviews </a></li>
+                <li><a href = "bookings"> Bookings </a></li>
+            </ul>
+        </nav>
+
+        <div class="column">
+            <h2> Reviews </h2>
+            {% for review in reviews_list %}
+                <p>
+                {% for field in review %}
+                    {{field}}
+                {% endfor %}
+                </p>
+                <br>
+            {% endfor %}
+        </div>
+
+        <div class="column">
+            <h2>Add Review</h2>
+            <form action="/reviews" method="post">
+                Text: <input name="text" type="text"/> <br>
+                Rating: <input name="rating" type="text"/> <br>
+                <button>Submit</button>
+            </form>
+        </div>
+
+    </body>
+</html>

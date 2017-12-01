@@ -1,6 +1,6 @@
-var imageNumber = 0;
+var imageNumber = 1;
 
-//Currently only supports
+//Currently only supports:
     //-1, previous image.
     //0, no change.
     //1, next image.
@@ -10,12 +10,14 @@ function changeImage(imageNumberChange) {
     imageNumber += imageNumberChange;
 
     if (imageNumber > images.length)
-        imageNumber = 0;
-    if (imageNumber < 0)
+        imageNumber = 1;
+    if (imageNumber < 1)
         imageNumber = images.length;
+
+    console.debug("Changing to image " + imageNumber);
 
     for (i = 0; i < images.length; i++)
         images[i].style.display = "none";
 
-    images[imageNumber].style.display = "block";
+    images[imageNumber - 1].style.display = "block";
 }

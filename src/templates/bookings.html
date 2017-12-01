@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>  
+	<head>
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
+        <title>Bookings</title>
+        <!--CSS-->
+        <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
+        <link rel="stylesheet" type="text/css" href="static/css/bookings.css"/>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="company"> Alex and Jake's Hotel</h1>
+            <img src="static/img/logo.png" alt="Company Logo" id="logo"> 
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href= "/"> Home </a></li>
+                <li><a href = "attractions"> Attractions </a></li>
+                <li><a href = "reviews"> Reviews </a></li>
+                <li><a href = "bookings"> Bookings </a></li>
+            </ul>
+        </nav>
+
+        <div class="column">
+            <h2> Bookings </h2>
+            <h3>Room, Arrival Date, Departure Date</h3>
+            {% for booking in bookings_list %}
+                <p>
+                {{booking[5]}}, {{booking[0]}}, {{booking[2]}}
+                </p>
+                <br>
+            {% endfor %}
+        </div>
+
+        <div class="column">
+            <h2>Add Booking</h2>
+            <form action="/bookings" method="post">
+                Arrival Date: <input name="arrivalDate" type="text"/> <br>
+                Departure Date: <input name="departureDate" type="text"/> <br>
+                First Name: <input name="firstName" type="text"/> <br>
+                Last Name: <input name="lastName" type="text"/> <br>
+                Email Address: <input name="email" type="text"/> <br>
+                Room: <input name="room" type="text"/> <br>
+                <button>Submit</button>
+            </form>
+        </div>
+
+    </body>
+</html>

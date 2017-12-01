@@ -1,13 +1,9 @@
 /* Image slideshow styling */
-.hotelimg {
+.hotelImg {
     display: none;
     width: 80%;
     position: center;
     padding-bottom: 10px;
-}
-
-#mainimg {
-    display: block;
 }
 
 #imagenav {
