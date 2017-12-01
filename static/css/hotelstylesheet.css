@@ -1,17 +1,17 @@
 /* Navbar styling */
-#navbar {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #7ea5e5;
 }
-.navitem {
+nav ul li {
     float: left;
     border-right: 2px solid white;
 }
 
-.navitem a {
+nav ul li a {
     display: block;
     padding: 12px;
     text-decoration: none;
@@ -19,12 +19,12 @@
     font-family: Arial;
 }
 
-.navitem a:hover {
+nav ul li a:hover {
     background-color: #5f7daf;
 }
 
 /* Header styling */
-#header {
+header {
     height: 80px;
 }
 
