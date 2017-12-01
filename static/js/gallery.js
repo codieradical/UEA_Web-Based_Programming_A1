@@ -6,6 +6,10 @@ var imageNumber = 1;
     //1, next image.
 //Other values may cause bound issues.
 function changeImage(imageNumberChange) {
+
+    if(imageNumberChange > 1 || imageNumberChange < -1)
+    console.warn("Image number change out of bounds. This may cause issues.")
+
     var images = document.getElementsByClassName("hotelImg");
     imageNumber += imageNumberChange;
 
