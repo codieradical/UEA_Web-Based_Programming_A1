@@ -1,15 +1,62 @@
 <!DOCTYPE html>
 <html>  
 	<head>    
-		<title>Home</title>    	
+		<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
+        <title>Home</title>
+        <link rel="stylesheet" type="text/css" href="static/hotelstylesheet.css"/>
+        <link rel="stylesheet" type="text/css" href="static/indexstyle.css"/>
+        <script src="static/imageslideshow.js"></script>
 	</head>  
 	<body>
-	
-		<p><a href = "attractions"> Show Attractions </a></p>
-		
-		<p><a href = "reviews"> Show Reviews </a></p>
+    
+        <div id="header">
+           <h1 id="company"> Alex and Jake's Hotel</h1>
+            <img src="static/logo.png" alt="Company Logo" id="logo"> 
+        </div>
 
-
-
+        <div id="navigation">
+            <nav>
+                <ul id="navbar">
+                    <li class="navitem"><a href= "home"> Home </a></li>
+                    <li class="navitem"><a href = "attractions"> Attractions </a></li>
+                    <li class="navitem"><a href = "reviews"> Reviews </a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="column">
+            <h2> Hotel name </h2>
+            <h3> Overview </h3>
+            <p>
+                The --hotel name here-- , is a luxury hotel in a great
+                tourist destination. Here we pride ourselves on our
+                outstanding facilities and friendly customer service.
+                Immerse yourself in nature in our beautiful gardens.
+                Enjoy on demand room service whenever you want it.
+                </br></br>
+                Here's just a few of things you'll get when staying here:
+            </p>
+            <ul>
+                <li> Luxurious beds </li>
+                <li> Breakfast included </li>
+                <li> Great views </li>
+                <li> On-call cleaner </li>
+                <li> ...and more! </li>
+            </ul>
+            
+        </div>
+        
+        <div class="column">
+            <h3> Gallery </h3>
+            <img src="static/hotelrating.png" alt="4.5 Star rating" id="rating">
+            <img class="hotelimg" id="mainimg" src="static/hotel1.jpg" alt="Hotel living room">
+            <img class="hotelimg" src="static/hotel2.jpg" alt="Hotel bedroom">
+            <img class="hotelimg" src="static/hotel3.jpg" alt="Hotel kitchen">
+            <div id="imagenav">
+                <button type="button" onclick="changeImage(-1)" id="previous"> Previous </button>
+                <button type="button" onclick="changeImage(1)" id="next"> Next </button>
+            </div>
+        </div>
+        
 	</body>
 </html>
