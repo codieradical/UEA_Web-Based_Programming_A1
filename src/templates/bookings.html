@@ -6,9 +6,9 @@
         <!--CSS-->
         <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
         <link rel="stylesheet" type="text/css" href="static/css/bookings.css"/>
-        <!--Error print script-->
         {% if err != "" %}
-            <script>alert("{{err}}");</script>
+        <!--Error print script-->
+        <script>alert("{{err}}");</script>
         {% endif %}
     </head>
 
@@ -32,11 +32,11 @@
         <div class="column">
             <h2> Bookings </h2>
             {% for booking in bookings_list %}
-                {% if booking[6].lower() == "true" %}
-                    <p>
-                    <b>Room {{booking[5]}}</b>, {{booking[0]}} - {{booking[1]}}
-                    </p>
-                {% endif %}
+            {% if booking[6].lower() == "true" %}
+            <p>
+                <b>Room {{booking[5]}}</b>, {{booking[0]}} - {{booking[1]}}
+            </p>
+            {% endif %}
             {% endfor %}
         </div>
 
