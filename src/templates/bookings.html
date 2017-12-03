@@ -6,6 +6,10 @@
         <!--CSS-->
         <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
         <link rel="stylesheet" type="text/css" href="static/css/bookings.css"/>
+        <!--Error print script-->
+        {% if err != "" %}
+            <script>alert("{{err}}");</script>
+        {% endif %}
     </head>
 
     <body>
@@ -20,6 +24,8 @@
                 <li><a href="/attractions">Attractions</a></li>
                 <li><a href="/reviews">Reviews</a></li>
                 <li><a href="/bookings">Bookings</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/admin">Admin</a></li>
             </ul>
         </nav>
 
@@ -37,8 +43,8 @@
         <div class="column">
             <h2>Request Booking</h2>
             <form action="/bookings" method="post">
-                Arrival Date: <input name="arrivalDate" type="text"/> <br>
-                Departure Date: <input name="departureDate" type="text"/> <br>
+                Arrival Date: <input name="arrivalDate" type="date"/> <br>
+                Departure Date: <input name="departureDate" type="date"/> <br>
                 First Name: <input name="firstName" type="text"/> <br>
                 Last Name: <input name="lastName" type="text"/> <br>
                 Email Address: <input name="email" type="text"/> <br>

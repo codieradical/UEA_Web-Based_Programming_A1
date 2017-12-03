@@ -6,6 +6,10 @@
         <!--CSS-->
         <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
         <link rel="stylesheet" type="text/css" href="static/css/reviews.css"/>
+        <!--Error print script-->
+        {% if err != "" %}
+            <script>alert("{{err}}");</script>
+        {% endif %}
     </head>
 
     <body>
@@ -20,6 +24,8 @@
                 <li><a href="/attractions">Attractions</a></li>
                 <li><a href="/reviews">Reviews</a></li>
                 <li><a href="/bookings">Bookings</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/admin">Admin</a></li>
             </ul>
         </nav>
 

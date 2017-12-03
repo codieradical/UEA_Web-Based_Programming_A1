@@ -8,6 +8,10 @@
         <link rel="stylesheet" type="text/css" href="static/css/home.css"/>
         <!--JS-->
         <script src="static/js/gallery.js"></script>
+        <!--Error print script-->
+        {% if err != "" %}
+            <script>alert("{{err}}");</script>
+        {% endif %}
 	</head>
 
 	<body onload="changeImage(0)">
@@ -23,7 +27,7 @@
                 <li><a href="/reviews">Reviews</a></li>
                 <li><a href="/bookings">Bookings</a></li>
                 <li><a href="/about">About</a></li>
-                <li><a href="/login">Admin</a></li>
+                <li><a href="/admin">Admin</a></li>
             </ul>
         </nav>
         
