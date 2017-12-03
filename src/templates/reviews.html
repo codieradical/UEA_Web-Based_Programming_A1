@@ -27,11 +27,12 @@
             <h2> Reviews </h2>
             {% for review in reviews_list %}
                 <p>
-                {% for field in review %}
-                    {{field}}
-                {% endfor %}
+                    <b>{{review[2]}}</b>
+                    <br>
+                    {{review[1]}} / 5
+                    <br>
+                    {{review[0]}}
                 </p>
-                <br>
             {% endfor %}
         </div>
 

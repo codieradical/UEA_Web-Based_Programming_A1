@@ -1,6 +1,7 @@
 """Hotel site API"""
 from flask import Flask, render_template, request
 from src.io.csv_helper import readcsv, writecsv
+from datetime import datetime
 
 #A custom templates path is used to keep the project files organized.
 app = Flask(__name__, template_folder="src\\templates")
@@ -23,7 +24,8 @@ def addreview():
     #Add an entry to the list.
     text = request.form[("text")]
     rating = request.form[("rating")]
-    new_review = [text, rating]
+    date_created = datetime.now().strftime("%A, %d %B %Y - %H:%M")
+    new_review = [text, rating, date_created]
     reviews_list.append(new_review)
     #Write the edited list to the csv file.
     writecsv(reviews_list, "db\\reviews.csv")
@@ -51,9 +53,10 @@ def addbooking():
     email = request.form[("email")]
     room = request.form[("room")]
     booking_confirmed = False
+    date_created = datetime.now().strftime("%A, %d %B %Y - %H:%M")
     new_booking = [arrival_date, departure_date, first_name,
-                   last_name, email, room, booking_confirmed]
-    bookings_list.append(newBooking)
+                   last_name, email, room, booking_confirmed, date_created]
+    bookings_list.append(new_booking)
     #Write the edited list to the csv file.
     writecsv(bookings_list, "db\\bookings.csv")
     #Show the user the /bookings page.

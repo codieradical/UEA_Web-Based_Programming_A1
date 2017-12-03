@@ -25,12 +25,12 @@
 
         <div class="column">
             <h2> Bookings </h2>
-            <h3>Room, Arrival Date, Departure Date</h3>
             {% for booking in bookings_list %}
-                <p>
-                {{booking[5]}}, {{booking[0]}}, {{booking[2]}}
-                </p>
-                <br>
+                {% if booking[6].lower() == "true" %}
+                    <p>
+                    <b>Room {{booking[5]}}</b>, {{booking[0]}} - {{booking[1]}}
+                    </p>
+                {% endif %}
             {% endfor %}
         </div>
 
