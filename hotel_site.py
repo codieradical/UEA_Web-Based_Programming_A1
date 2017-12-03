@@ -22,10 +22,12 @@ def addreview():
     #Read the reviews list csv.
     reviews_list = readcsv("db\\reviews.csv")
     #Add an entry to the list.
+    first_name = request.form[("firstName")]
+    last_name = request.form[("lastName")]
     text = request.form[("text")]
     rating = request.form[("rating")]
     date_created = datetime.now().strftime("%A, %d %B %Y - %H:%M")
-    new_review = [text, rating, date_created]
+    new_review = [first_name, last_name, text, rating, date_created]
     reviews_list.append(new_review)
     #Write the edited list to the csv file.
     writecsv(reviews_list, "db\\reviews.csv")
@@ -69,6 +71,20 @@ def bookings():
     bookings_list = readcsv("db\\bookings.csv")
     #Show the bookings page with the bookings list data on the page.
     return render_template("bookings.html", bookings_list=bookings_list)
+
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+@app.route("/admin")
+def admin():
+    bookings_list = readcsv("db\\bookings.csv")
+    reviews_list = readcsv("db\\reviews.csv")
+    return render_template("admin.html", bookings_list=bookings_list, reviews_list=reviews_list)
 
 if __name__ == "__main__":
     app.run(debug=True)
