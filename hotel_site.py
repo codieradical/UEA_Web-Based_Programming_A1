@@ -95,8 +95,15 @@ def bookings(err=""):
     """Bookings Page Route (/bookings)"""
     #Read the bookings list csv.
     bookings_list = readcsv("db\\bookings.csv")
+
+    displayed_bookings_list = []
+
+    #Remove bookings that haven't been confirmed or are in the past.
+    for booking in bookings_list:
+        if(booking[6].lower() == "true" and datetime.strptime(booking[1], "%Y-%m-%d") > datetime.now()):
+            displayed_bookings_list.append(booking)
     #Show the bookings page with the bookings list data on the page.
-    return render_template("bookings.html", bookings_list=bookings_list, err=err)
+    return render_template("bookings.html", bookings_list=displayed_bookings_list, err=err)
 
 @app.route("/about")
 def about(err=""):

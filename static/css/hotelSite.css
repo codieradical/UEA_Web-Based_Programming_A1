@@ -63,6 +63,6 @@ body {
     padding-right: 20px;
 }
 
-
-
-
+.column {width:50%;display:inline-block}
+.column:first-of-type {float: left;}
+.column:last-of-type {float: right;}
