@@ -32,12 +32,22 @@ div {
     border-radius: 50px;
     padding: 5px;
     font-size: 18px;
-    color: white;
     text-decoration: none;
+    color: black;
     font-family: Arial;
 }
 
 .internalnav:hover {
     background-color: #5f7daf;
     border-color: #5f7daf;
+}
+
+.attraction {
+    background-color: #eaf2ff;
+    padding: 20px;
+}
+
+h2, h3 {
+    background-color: #7ea5e5;
+    padding: 10px;
 }
