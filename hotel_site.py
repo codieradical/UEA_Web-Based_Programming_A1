@@ -72,5 +72,19 @@ def bookings():
     #Show the bookings page with the bookings list data on the page.
     return render_template("bookings.html", bookings_list=bookings_list)
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
+
+@app.route("/login")
+def login():
+    return render_template("login.html")
+
+@app.route("/admin")
+def admin():
+    bookings_list = readcsv("db\\bookings.csv")
+    reviews_list = readcsv("db\\reviews.csv")
+    return render_template("admin.html", bookings_list=bookings_list, reviews_list=reviews_list)
+
 if __name__ == "__main__":
     app.run(debug=True)
