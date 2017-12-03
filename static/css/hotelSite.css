@@ -66,3 +66,16 @@ body {
 .column {width:50%;display:inline-block}
 .column:first-of-type {float: left;}
 .column:last-of-type {float: right;}
+h2, h3 {
+    background-color: #7ea5e5;
+    padding: 10px;
+}
+
+.content {
+    background-color: #eaf2ff;
+    padding: 20px;
+}
+
+
+
+

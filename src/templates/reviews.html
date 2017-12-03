@@ -29,7 +29,7 @@
             </ul>
         </nav>
 
-        <div class="column">
+        <div class="column content">
             <h2> Reviews </h2>
             {% for review in reviews_list %}
             <p>
@@ -42,13 +42,13 @@
             {% endfor %}
         </div>
 
-        <div class="column">
+        <div class="column content">
             <h2>Add Review</h2>
             <form action="/reviews" method="post">
-                First Name: <input name="firstName" type="text"/> <br>
-                Last Name: <input name="lastName" type="text"/> <br>
-                Text: <input name="text" type="text"/> <br>
-                Rating: <input name="rating" type="text"/> <br>
+                First Name: <input name="firstName" type="text"/> <br><br>
+                Last Name: <input name="lastName" type="text"/> <br><br>
+                Text: <input name="text" type="text"/> <br><br>
+                Rating: <input name="rating" type="text"/> <br><br>
                 <button>Submit</button>
             </form>
         </div>
