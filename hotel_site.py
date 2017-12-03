@@ -22,10 +22,12 @@ def addreview():
     #Read the reviews list csv.
     reviews_list = readcsv("db\\reviews.csv")
     #Add an entry to the list.
+    first_name = request.form[("firstName")]
+    last_name = request.form[("lastName")]
     text = request.form[("text")]
     rating = request.form[("rating")]
     date_created = datetime.now().strftime("%A, %d %B %Y - %H:%M")
-    new_review = [text, rating, date_created]
+    new_review = [first_name, last_name, text, rating, date_created]
     reviews_list.append(new_review)
     #Write the edited list to the csv file.
     writecsv(reviews_list, "db\\reviews.csv")

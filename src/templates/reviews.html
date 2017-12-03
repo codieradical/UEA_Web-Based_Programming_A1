@@ -27,11 +27,11 @@
             <h2> Reviews </h2>
             {% for review in reviews_list %}
                 <p>
-                    <b>{{review[2]}}</b>
+                    <b>{{review[0]}} {{review[1]}}</b>, {{review[4]}}
                     <br>
-                    {{review[1]}} / 5
+                    {{review[3]}} / 5
                     <br>
-                    {{review[0]}}
+                    {{review[2]}}
                 </p>
             {% endfor %}
         </div>
@@ -39,6 +39,8 @@
         <div class="column">
             <h2>Add Review</h2>
             <form action="/reviews" method="post">
+                First Name: <input name="firstName" type="text"/> <br>
+                Last Name: <input name="lastName" type="text"/> <br>
                 Text: <input name="text" type="text"/> <br>
                 Rating: <input name="rating" type="text"/> <br>
                 <button>Submit</button>
