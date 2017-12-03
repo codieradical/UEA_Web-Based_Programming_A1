@@ -66,6 +66,9 @@ body {
 .column {width:50%;display:inline-block}
 .column:first-of-type {float: left;}
 .column:last-of-type {float: right;}
+.column>*{margin-left: 20px;margin-right: 20px}
+.column>*:first-child{margin-top: 20px;}
+.column>*:last-child{margin-bottom: 20px;}
 h2, h3 {
     background-color: #7ea5e5;
     padding: 10px;
@@ -73,7 +76,6 @@ h2, h3 {
 
 .content {
     background-color: #eaf2ff;
-    padding: 20px;
 }
 
 
