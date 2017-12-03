@@ -8,7 +8,7 @@ nav ul {
 }
 nav ul li {
     float: left;
-    border-right: 2px solid white;
+    border-right: 2px solid #d1e2ff;
 }
 
 nav ul li a {
@@ -44,7 +44,7 @@ header {
 /* Page content syling */
 
 p {
-    font-size: 12px;
+    font-size: 16px;
     font-family: Times New Roman;
 }
 
@@ -55,6 +55,12 @@ h1, h2, h3, h4, h5, h6 {
 li {
     font-size: 12px;
     font-family: Times New Roman;
+}
+
+body {
+    background-color: #d1e2ff;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 
