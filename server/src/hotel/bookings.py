@@ -1,7 +1,7 @@
 """Booking related functions."""
 from datetime import datetime
 
-from src.io.csv_helper import readcsv
+from server.src.io.csv_helper import readcsv
 
 def are_booking_dates_available(arrival_date, departure_date, room):
     """Validates a booking timespan.
