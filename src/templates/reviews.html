@@ -6,6 +6,8 @@
         <!--CSS-->
         <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
         <link rel="stylesheet" type="text/css" href="static/css/reviews.css"/>
+        <!--JS-->
+        <script src="/static/js/reviews.js"></script>
         {% if err != "" %}
         <!--Error print script-->
         <script>alert("{{err}}");</script>
@@ -44,7 +46,7 @@
 
         <div class="column content">
             <h2>Add Review</h2>
-            <form action="/reviews" method="post">
+            <form name="reviewForm" onsubmit="return validateForm()" action="/reviews" method="post">
                 First Name: <input name="firstName" type="text"/> <br><br>
                 Last Name: <input name="lastName" type="text"/> <br><br>
                 Text: <input name="text" type="text"/> <br><br>
