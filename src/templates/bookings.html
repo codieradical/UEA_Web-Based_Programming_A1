@@ -19,12 +19,13 @@
         {% endif %}
         <!--Calendar Script-->
         <script>
-
+            //Adds bookings to the fullcalendar object as events.
             $(document).ready(function() {
                 $('#calendar').fullCalendar({
                     editable: true,
                     eventLimit: true, // allow "more" link when too many events
                     events: [
+                        //Jinja in JS looks errornous in Visual Studio Code
                         {% for booking in bookings_list %}{
                             title: "Room {{booking[5]}}",
                             start: "{{booking[0]}}",
