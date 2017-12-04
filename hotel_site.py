@@ -105,11 +105,6 @@ def bookings(err=""):
     #Show the bookings page with the bookings list data on the page.
     return render_template("bookings.html", bookings_list=displayed_bookings_list, err=err)
 
-@app.route("/about")
-def about(err=""):
-    """About Page Route (/about)"""
-    return render_template("about.html", err=err)
-
 @app.route("/admin")
 @requires_admin
 def admin(err=""):
