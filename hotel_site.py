@@ -1,5 +1,5 @@
 """Hotel site API"""
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, Response
 from datetime import datetime
 
 from src.io.csv_helper import readcsv, writecsv
@@ -10,9 +10,9 @@ from src.hotel.bookings import are_booking_dates_available
 app = Flask(__name__, template_folder="src\\templates")
 
 @app.route("/")
-def home(err=""):
+def index(err=""):
     """Index Route (/)"""
-    return render_template("home.html", err=err)
+    return render_template("index.html", err=err)
 
 @app.route("/attractions")
 def attractions(err=""):
