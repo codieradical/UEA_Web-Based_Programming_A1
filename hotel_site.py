@@ -52,6 +52,38 @@ def reviews(err=""):
     #Show the reviews page, with the reviews list data on the page.
     return render_template("reviews.html", reviews_list=reviews_list, err=err)
 
+@app.route("/bookings/<index>/toggleConfirmed", methods=["GET"])
+def confirmbooking(index):
+    #Read the bookings list csv.
+    bookings_list = readcsv("db\\bookings.csv")
+    #Toggle the confirmed boolean in the booking.
+    bookings_list[int(index)][6] = not bookings_list[int(index)][6].lower() == "true"
+    #Write the edited list to the csv file.
+    writecsv(bookings_list, "db\\bookings.csv")
+    return Response('Toggled Confirmation.', 200, {})
+
+@app.route("/bookings/<index>", methods=["DELETE"])
+def deletebooking(index):
+    #Read the bookings list csv.
+    bookings_list = readcsv("db\\bookings.csv")
+    #Delete the chosen booking from the list.
+    del bookings_list[int(index)]
+    #Write the edited list to the csv file.
+    writecsv(bookings_list, "db\\bookings.csv")
+    #Give a basic success response. This route is meant for AJAX, so no HTML response is needed.
+    return Response('Deleted booking.', 200, {})
+
+@app.route("/reviews/<index>", methods=["DELETE"])
+def deletereview(index):
+    #Read the reviews list csv.
+    reviews_list = readcsv("db\\reviews.csv")
+    #Delete the chosen review from the list.
+    del reviews_list[int(index)]
+    #Write the edited list to the csv file.
+    writecsv(reviews_list, "db\\reviews.csv")
+    #Give a basic success response. This route is meant for AJAX, so no HTML response is needed.
+    return Response('Deleted review.', 200, {})
+
 @app.route("/bookings", methods=["POST"])
 def addbooking(err=""):
     """Add Booking Route (POST:/bookings)"""

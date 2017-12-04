@@ -6,6 +6,9 @@
         <!--CSS-->
         <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
         <link rel="stylesheet" type="text/css" href="static/css/admin.css"/>
+        <!--JS-->
+        <script src="/static/lib/jquery.min.js"></script>
+        <script src="/static/js/admin.js"></script>
         {% if err != "" %}
         <!--Error print script-->
         <script>alert("{{err}}");</script>
@@ -49,16 +52,16 @@
                 <td>{{booking[1]}}</td>
                 <td>
                 {% if booking[6].lower() == "true" %}
-                <input type="checkbox" checked>
+                <input onchange="toggleConfirmed({{loop.index0}});" type="checkbox" checked>
                 {% else %}
-                <input type="checkbox">
+                <input onchange="toggleConfirmed({{loop.index0}});" type="checkbox">
                 {% endif %}
                 </td>
                 <td>{{booking[2]}}</td>
                 <td>{{booking[3]}}</td>
                 <td>{{booking[4]}}</td>
                 <td>{{booking[7]}}</td>
-                <td><button>Delete</button></td>
+                <td><button onclick="deleteBooking({{loop.index0}});$(this).parent().parent().remove();">Delete</button></td>
             </tr>
             {% endfor %}
         </table>
@@ -80,7 +83,7 @@
                 <td>{{review[3]}}</td>
                 <td>{{review[2]}}</td>
                 <td>{{review[4]}}</td>
-                <td><button>Delete</button></td>
+                <td><button onclick="deleteReview({{loop.index0}});$(this).parent().parent().remove();">Delete</button></td>
             </tr>
             {% endfor %}
         </table>
