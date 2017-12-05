@@ -106,3 +106,6 @@ ENV/
 /.vscode/tasks.json
 /.vscode/launch.json
 /.vscode/extensions.json
+
+# Client Lib
+!/client/static/lib
