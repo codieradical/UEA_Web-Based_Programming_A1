@@ -30,7 +30,7 @@
             </ul>
         </nav>
 
-        <div class="column content">
+        <div class="column">
             <h2> Reviews </h2>
             {% for review in reviews_list %}
             <p>
@@ -43,7 +43,7 @@
             {% endfor %}
         </div>
 
-        <div class="column content">
+        <div class="column">
             <h2>Add Review</h2>
             <form name="reviewForm" onsubmit="return validateForm()" action="/reviews" method="post">
                 First Name: <input name="firstName" type="text"/> <br><br>

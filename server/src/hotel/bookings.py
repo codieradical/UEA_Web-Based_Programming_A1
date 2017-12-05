@@ -14,7 +14,7 @@ def are_booking_dates_available(arrival_date, departure_date, room):
     if arrival_date >= departure_date:
         return "Departure date must be after arrival date."
     #Prevent double booking.
-    bookings_list = readcsv("db\\bookings.csv")
+    bookings_list = readcsv("server\\db\\bookings.csv")
     for booking in bookings_list: #Loop through existing bookings.
         #Only check bookings that are confirmed, and have the same room.
         if room == booking[5] and booking[6].lower() == "true":

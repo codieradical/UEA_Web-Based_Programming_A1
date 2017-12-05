@@ -24,11 +24,3 @@
     max-width: 150px;
     height: 25px;
 }
-
-.column {
-    width: 48%;
-    float: left;
-    padding-left: 5px;
-    padding-bottom: 10px;
-    padding-right: 5px;
-}

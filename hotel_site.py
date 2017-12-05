@@ -93,7 +93,7 @@ def deletebooking(index):
 def addbooking():
     """Add Booking Route (POST:/bookings)"""
     #Read the bookings list csv.
-    bookings_list = readcsv("db\\bookings.csv")
+    bookings_list = readcsv(bookings_csv_path)
     #Gather new booking details from the form
     arrival_date = request.form[("arrivalDate")]
     departure_date = request.form[("departureDate")]
@@ -102,7 +102,7 @@ def addbooking():
     email = request.form[("email")]
     room = request.form[("room")]
     booking_confirmed = False  #Booking confirmation must be set to true by the admin. 
-    date_created = datetime.now().strftime("%Y-%m-%d - %H:%M")
+    date_created = datetime.now().strftime("%Y-%m-%dT%H:%MZ")
 
     #Validate form input
     if(not arrival_date or not departure_date

@@ -2,27 +2,7 @@ div {
     float: left;
 }
 
-.column1 {
-    float: left;
-    width: 45%;
-    padding-top: 20px;
-    padding-right: 5%;
-    padding-bottom: 30px;
-}
-
-.column2 {
-    float: right;
-    width: 45%;
-    padding-top: 20px;
-    padding-right: 5%;
-    padding-bottom: 30px;
-}
-
 .attimg {
-    width: 100%;
-}
-
-#map {
     width: 100%;
 }
 
