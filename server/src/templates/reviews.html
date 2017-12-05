@@ -4,8 +4,8 @@
 		<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
         <title>Reviews</title>
         <!--CSS-->
-        <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
-        <link rel="stylesheet" type="text/css" href="static/css/reviews.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/hotelSite.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/reviews.css"/>
         <!--JS-->
         <script src="/static/js/reviews.js"></script>
         {% if err != "" %}
@@ -16,7 +16,7 @@
 
     <body>
         <header>
-            <h1 id="company"> Alex and Jake's Hotel</h1>
+            <h1 id="company"> The Great Northern</h1>
             <img src="static/img/logo.png" alt="Company Logo" id="logo"> 
         </header>
 
@@ -30,28 +30,30 @@
             </ul>
         </nav>
 
-        <div class="column">
-            <h2> Reviews </h2>
-            {% for review in reviews_list %}
-            <p>
-                <b>{{review[0]}} {{review[1]}}</b>, {{review[4]}}
-                <br>
-                {{review[3]}} / 5
-                <br>
-                {{review[2]}}
-            </p>
-            {% endfor %}
-        </div>
+        <div class="row">
+            <div class="column">
+                <h2> Reviews </h2>
+                {% for review in reviews_list %}
+                <p>
+                    <b>{{review[0]}} {{review[1]}}</b>, {{review[4]}}
+                    <br>
+                    {{review[3]}} / 5
+                    <br>
+                    {{review[2]}}
+                </p>
+                {% endfor %}
+            </div>
 
-        <div class="column">
-            <h2>Add Review</h2>
-            <form name="reviewForm" onsubmit="return validateForm()" action="/reviews" method="post">
-                First Name: <input name="firstName" type="text"/> <br><br>
-                Last Name: <input name="lastName" type="text"/> <br><br>
-                Text: <input name="text" type="text"/> <br><br>
-                Rating: <input name="rating" type="text"/> <br><br>
-                <button>Submit</button>
-            </form>
+            <div class="column">
+                <h2>Add Review</h2>
+                <form name="reviewForm" onsubmit="return validateForm()" action="/reviews" method="post">
+                    First Name: <input name="firstName" type="text"/> <br><br>
+                    Last Name: <input name="lastName" type="text"/> <br><br>
+                    Text: <input name="text" type="text"/> <br><br>
+                    Rating: <input name="rating" type="text"/> <br><br>
+                    <button>Submit</button>
+                </form>
+            </div>
         </div>
 
     </body>

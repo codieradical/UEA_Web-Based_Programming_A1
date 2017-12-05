@@ -4,8 +4,8 @@
 		<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
         <title>Home</title>
         <!--CSS-->
-        <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
-        <link rel="stylesheet" type="text/css" href="static/css/index.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/hotelSite.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/index.css"/>
         <!--JS-->
         <script src="static/js/index.js"></script>
         {% if err != "" %}
@@ -30,36 +30,47 @@
             </ul>
         </nav>
         
-        <div class="column">
-            <h2> The Great Northern Hotel </h2>
-            <h3> Overview </h3>
-            <p>
-                The Great Northern, is a luxury hotel in a great
-                tourist destination. Here we pride ourselves on our
-                outstanding facilities and friendly customer service.
-                Immerse yourself in nature in our beautiful gardens.
-                Enjoy on-demand room service whenever you want it.
-                </br></br>
-                Here's just a few of things you'll get when staying here:
-            </p>
-            <ul>
-                <li> Luxurious beds </li>
-                <li> Breakfast included </li>
-                <li> Great views </li>
-                <li> On-call cleaner </li>
-                <li> ...and more! </li>
-            </ul>
-        </div>
-        
-        <div class="column">
-            <h3> Gallery </h3>
-            <img src="static/img/hotelrating.png" alt="4.5 Star rating" id="rating">
-            <img class="hotelImg" src="static/img/hotel1.jpg" alt="Hotel living room">
-            <img class="hotelImg" src="static/img/hotel2.jpg" alt="Hotel bedroom">
-            <img class="hotelImg" src="static/img/hotel3.jpg" alt="Hotel kitchen">
-            <div id="imagenav">
-                <button type="button" onclick="changeImage(-1)" id="previous"> Previous </button>
-                <button type="button" onclick="changeImage(1)" id="next"> Next </button>
+        <div class="row">
+            <div class="column">
+                <h2> The Great Northern Hotel </h2>
+                <h3> Overview </h3>
+                <p>
+                    The Great Northern, is a luxury hotel in a great
+                    tourist destination. Here we pride ourselves on our
+                    outstanding facilities and friendly customer service.
+                    Immerse yourself in nature in our beautiful gardens.
+                    Enjoy on-demand room service whenever you want it.
+                    </br></br>
+                    Here's just a few of things you'll get when staying here:
+                </p>
+                <ul>
+                    <li> Luxurious beds </li>
+                    <li> Breakfast included </li>
+                    <li> Great views </li>
+                    <li> On-call cleaner </li>
+                    <li> ...and more! </li>
+                </ul>
+                <p>
+                    To make a booking head over to our booking page, or call
+                    us on 0460 753 029. Bookings should be made no shorter
+                    than an month in advance due to popular demand.
+                </p>
+                <br>
+                <a class="internalnav" href="/bookings">Book a room</a>
+                <br></br>
+                <br>
+            </div>
+            
+            <div class="column">
+                <h3> Gallery </h3>
+                <img src="static/img/hotelrating.png" alt="4.5 Star rating" id="rating">
+                <img class="hotelImg" src="static/img/hotel1.jpg" alt="Hotel living room">
+                <img class="hotelImg" src="static/img/hotel2.jpg" alt="Hotel bedroom">
+                <img class="hotelImg" src="static/img/hotel3.jpg" alt="Hotel kitchen">
+                <div id="imagenav">
+                    <button type="button" onclick="changeImage(-1)" id="previous"> Previous </button>
+                    <button type="button" onclick="changeImage(1)" id="next"> Next </button>
+                </div>
             </div>
         </div>
 	</body>

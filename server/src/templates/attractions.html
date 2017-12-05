@@ -4,8 +4,8 @@
 		<meta http-equiv="Content-type" content="text/html;charset=utf-8"/>
         <title>Attractions</title>
         <!--CSS-->
-        <link rel="stylesheet" type="text/css" href="static/css/hotelSite.css"/>
-        <link rel="stylesheet" type="text/css" href="static/css/attractions.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/hotelSite.css"/>
+        <link rel="stylesheet" type="text/css" href="/static/css/attractions.css"/>
         {% if err != "" %}
         <!--Error print script-->
         <script>alert("{{err}}");</script>
@@ -14,7 +14,7 @@
 
     <body>
         <header>
-            <h1 id="company"> Alex and Jake's Hotel</h1>
+            <h1 id="company"> The Great Northern</h1>
             <img src="static/img/logo.png" alt="Company Logo" id="logo"> 
         </header>
 
@@ -63,7 +63,7 @@
             </div>
         
         <div class="row">
-            <h3> Leisure and activities </h3>
+            <h3 id="leisure"> Leisure and activities </h3>
             <div class="column">
                 <h4> Sunny Hills: Golf course </h4>
                 <p>
@@ -113,7 +113,7 @@
         </div>
         
         <div class="row">
-            <h3> Dining </h3>
+            <h3 id="dining"> Dining </h3>
             <div class="column">
                 <h4> Garmonbozia </h4>
                 <p>

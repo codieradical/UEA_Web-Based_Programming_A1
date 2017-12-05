@@ -42,7 +42,7 @@
 
     <body>
         <header>
-            <h1 id="company"> Alex and Jake's Hotel</h1>
+            <h1 id="company"> The Great Northern</h1>
             <img src="/static/img/logo.png" alt="Company Logo" id="logo"> 
         </header>
 
@@ -56,27 +56,29 @@
             </ul>
         </nav>
 
-        <div class="column">
-            <h2>Request Booking</h2>
-            <form name="bookingRequestForm" action="/bookings" onsubmit="return validateForm()" method="post">
-                Arrival Date: <input name="arrivalDate" type="date"/> <br><br>
-                Departure Date: <input name="departureDate" type="date"/> <br><br>
-                First Name: <input name="firstName" type="text"/> <br><br>
-                Last Name: <input name="lastName" type="text"/> <br><br>
-                Email Address: <input name="email" type="text"/> <br><br>
-                Room: <input name="room" type="text"/> <br><br>
-                <button>Submit</button>
-            </form>
-            <h2> Bookings </h2>
-            {% for booking in bookings_list %}
-            <p>
-                <b>Room {{booking[5]}}</b>, {{booking[0]}} - {{booking[1]}}
-            </p>
-            {% endfor %}
-        </div>
+        <div class="row">
+            <div class="column">
+                <h2>Request Booking</h2>
+                <form name="bookingRequestForm" action="/bookings" onsubmit="return validateForm()" method="post">
+                    Arrival Date: <input name="arrivalDate" type="date"/> <br><br>
+                    Departure Date: <input name="departureDate" type="date"/> <br><br>
+                    First Name: <input name="firstName" type="text"/> <br><br>
+                    Last Name: <input name="lastName" type="text"/> <br><br>
+                    Email Address: <input name="email" type="text"/> <br><br>
+                    Room: <input name="room" type="text"/> <br><br>
+                    <button>Submit</button>
+                </form>
+                <h2> Bookings </h2>
+                {% for booking in bookings_list %}
+                <p>
+                    <b>Room {{booking[5]}}</b>, {{booking[0]}} - {{booking[1]}}
+                </p>
+                {% endfor %}
+            </div>
 
-        <div class="column">
-            <div id='calendar'></div>
+            <div class="column">
+                <div id='calendar'></div>
+            </div>
         </div>
 
     </body>
