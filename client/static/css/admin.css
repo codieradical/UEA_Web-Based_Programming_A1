@@ -10,14 +10,20 @@ caption {
     font-size: 16px;
     font-family: Arial;
     font-weight: bold;
-    background-color: #7ea5e5;
+    background-color: #7e7e7e;
     padding: 10px;
 }
 
 table {
-    background-color: #eaf2ff;;
+    background-color: #eaeaea;
+    border-spacing: 0px;
 }
 
 th {
-    background-color: #d1e2ff;
+    background-color: #d1d1d1;
+}
+
+nav ul li a:hover
+{
+    background-color: #5f5f5f;
 }
